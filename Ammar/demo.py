@@ -84,7 +84,10 @@ plt.grid()
 plt.show()
 
 y_sol = sol[:, 0]
+v_sol = sol[:, 1]
 t_func = interp1d(y_sol, t, 'cubic')
+v_func = interp1d(t, v_sol , 'cubic')
+
 
 print("time taken to cover lenght L = ",t_func(L))
 
